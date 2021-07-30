@@ -42,7 +42,7 @@ function assignCertainProperties(toObject, fromObject, properties = []) {
 // transformer class
 class GulpRollup extends Transform {
   // eslint-disable-next-line consistent-return
-  _transform(file, encoding, cb) {
+  _transform(file, _, cb) {
     // cannot handle empty or unavailable files
     if (file.isNull()) return cb(null, file);
 
