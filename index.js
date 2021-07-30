@@ -7,7 +7,7 @@ var path = require('path')
 var applySourceMap = require('vinyl-sourcemaps-apply')
 var camelCase = require('lodash.camelcase')
 
-var PLUGIN_NAME = 'gulp-better-rollup'
+var PLUGIN_NAME = 'gulp-best-rollup'
 
 try {
 	var rollup = require('rollup')
