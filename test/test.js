@@ -153,7 +153,7 @@ describe('gulp-better-rollup', function() {
 		var resultsCount = 0
 		stream.on('data', data => {
 			var code = data.contents.toString().replace(/\n/gm, '').replace(/\t/gm, '').trim()
-			code.should.equal("var importsGlobal = (function ($) {'use strict';$ = $ && $.hasOwnProperty('default') ? $['default'] : $;var importsGlobal = $.trim;return importsGlobal;}(jQuery));")
+			code.should.equal("var importsGlobal = (function ($) {'use strict';function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }var $__default = /*#__PURE__*/_interopDefaultLegacy($);var importsGlobal = $__default['default'].trim;return importsGlobal;}(jQuery));")
 			++resultsCount
 		})
 		stream.on('end', data => {
