@@ -16,7 +16,7 @@ module.exports = {
     ecmaVersion: 12,
     requireConfigFile: false,
   },
-  ignorePatterns: ['dist/**/*.js'],
+  ignorePatterns: ['dist/**/*.js', 'test/fixture/**/*.js'],
   rules: {
     indent: [
       'error',
