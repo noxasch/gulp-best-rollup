@@ -1,1 +1,3 @@
-export var something = 'doge'
+const something = 'doge';
+
+export default something;

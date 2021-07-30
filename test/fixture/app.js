@@ -1,3 +1,4 @@
-import {something} from './util'
+/* eslint-disable no-console */
+import something from './util';
 
-console.log(something)
+console.log(something);

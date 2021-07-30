@@ -1,17 +1,8 @@
 /* eslint-disable */
 module.exports = {
   env: {
-    browser: true,
-    commonjs: true,
     es2021: true,
-    webextensions: true,
-    jest: true,
-  },
-  globals: {
-    page: true,
-    browser: true,
-    context: true,
-    jestPuppeteer: true,
+    mocha: true,
   },
   parser: '@babel/eslint-parser',
   plugins: [
@@ -22,7 +13,8 @@ module.exports = {
     'eslint-config-airbnb-base'
   ],
   parserOptions: {
-    ecmaVersion: 12
+    ecmaVersion: 12,
+    requireConfigFile: false,
   },
   ignorePatterns: ['dist/**/*.js'],
   rules: {

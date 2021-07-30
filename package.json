@@ -35,6 +35,10 @@
     "vinyl-sourcemaps-apply": "^0.2.1"
   },
   "devDependencies": {
+    "@babel/eslint-parser": "^7.14.7",
+    "@babel/eslint-plugin": "^7.14.5",
+    "eslint": "^7.31.0",
+    "eslint-config-airbnb-base": "^14.2.1",
     "gulp-sourcemaps": "^3.0.0",
     "mocha": "^9.0.2",
     "rollup": "^2.54.0",
