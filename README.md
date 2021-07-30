@@ -1,6 +1,9 @@
-# gulp-best-rollup
+# gulp-better-rollup-2
 
 forked from [MikeKovarik/gulp-better-rollup](https://github.com/MikeKovarik/gulp-better-rollup)
+forked from [jdz321/gulp-best-rollup](https://github.com/jdz321/gulp-best-rollup)
+
+Rewritten in modern ES6 and support Rollup v2.X
 
 [![Build Status](https://travis-ci.org/MikeKovarik/gulp-better-rollup.svg?branch=master)](https://travis-ci.org/MikeKovarik/gulp-better-rollup) [![Greenkeeper badge](https://badges.greenkeeper.io/MikeKovarik/gulp-better-rollup.svg)](https://greenkeeper.io/)
 
