@@ -24,14 +24,10 @@ This comes with some caveats:
 
 ## Installation
 
-```
-npm install gulp-better-rollup --save-dev
-```
-
-You also need to install your own rollup (version 1.x.x). `gulp-better-rollup` depends on your `rollup` as a peer-dependency.
+Note that you also need to install your own rollup (version 2.x.x). `gulp-better-rollup-2` depends on your `rollup` as a peer-dependency.
 
 ```
-npm install rollup@^1 --save-dev
+npm install gulp-better-rollup rollup --save-dev
 ```
 
 ## Usage
@@ -184,6 +180,16 @@ gulp.task('build', function() {
 })
 ```
 
-## Looking for maintainer
+## Contributing
 
-I no longer have time to dedicate myself to the project, nor do I use it in my current projects. I'd gladly accept new maintainers.
+You can help to improve code or update the docs as most of the contents are outdated.
+Currently we are 82.47%	code coverage.
+
+- Make sure to follow eslint rules
+- Make sure to test your code
+
+```
+npm run test
+```
+
+
