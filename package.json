@@ -1,6 +1,6 @@
 {
   "name": "gulp-best-rollup-2",
-  "version": "5.0.1",
+  "version": "5.0.2",
   "description": "Better Gulp plugin for Rollup ES6 module bundler",
   "author": "Mike Kovarik, jdz321, Alexander Dischberg",
   "license": "MIT",
@@ -29,7 +29,7 @@
     "node": ">=10"
   },
   "peerDependencies": {
-    "rollup": "^2.54.0"
+    "rollup": "^2.0.0"
   },
   "dependencies": {
     "lodash.camelcase": "^4.3.0",
@@ -44,7 +44,7 @@
     "eslint-config-airbnb-base": "^14.2.1",
     "gulp-sourcemaps": "^3.0.0",
     "mocha": "^9.0.2",
-    "rollup": "^2.54.0",
+    "rollup": "^2.0.0",
     "should": "^13.2.1"
   }
 }
