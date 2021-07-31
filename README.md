@@ -27,7 +27,7 @@ This comes with some caveats:
 Note that you also need to install your own rollup (version 2.x.x). `gulp-better-rollup-2` depends on your `rollup` as a peer-dependency.
 
 ```
-npm install gulp-better-rollup rollup --save-dev
+npm install gulp-best-rollup-2 rollup --save-dev
 ```
 
 ## Usage
