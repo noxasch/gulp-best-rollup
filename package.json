@@ -1,6 +1,6 @@
 {
   "name": "gulp-best-rollup-2",
-  "version": "5.0.2",
+  "version": "5.0.3",
   "description": "Better Gulp plugin for Rollup ES6 module bundler",
   "author": "Mike Kovarik, jdz321, Alexander Dischberg",
   "license": "MIT",
