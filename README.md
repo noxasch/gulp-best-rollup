@@ -1,11 +1,11 @@
-# gulp-better-rollup-2
+# gulp-best-rollup-2
 
 forked from [MikeKovarik/gulp-better-rollup](https://github.com/MikeKovarik/gulp-better-rollup)
 forked from [jdz321/gulp-best-rollup](https://github.com/jdz321/gulp-best-rollup)
 
 Rewritten in modern ES6 and support Rollup v2.X
 
-[![Build Status](https://api.travis-ci.com/noxasch/gulp-better-rollup-2.svg?branch=master)](https://travis-ci.com/github/noxasch/gulp-better-rollup-2)
+[![Build Status](https://api.travis-ci.com/noxasch/gulp-better-rollup-2.svg?branch=master)](https://travis-ci.com/github/noxasch/gulp-better-rollup-2) ![Node version](https://img.shields.io/node/v/gulp-best-rollup-2)
 
 A [Gulp](https://www.npmjs.com/package/gulp) plugin for [Rollup](https://www.npmjs.com/package/rollup) ES6 Bundler. In comparison with [gulp-rollup](https://www.npmjs.com/package/gulp-rollup), this plugin integrates Rollup deeper into Gulps pipeline chain. It takes some of the Rollup API out of your hands, in exchange for giving you full power over the pipeline (to use any gulp plugins).
 
