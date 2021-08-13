@@ -32,6 +32,58 @@ npm install gulp-best-rollup-2 rollup --save-dev
 
 ## Usage
 
+### Gulp 4
+
+```js
+const { src, dest } = require('gulp');
+const rollup = require('gulp-best-rollup-2');
+const through2 = require('through2');
+
+const { babel } = require('@rollup/plugin-babel');
+const { terser } = require('rollup-plugin-terser');
+const { nodeResolve } = require('@rollup/plugin-node-resolve');
+const commonjs = require('@rollup/plugin-commonjs');
+
+const rollupPlugins = [
+  commonjs(),
+  babel({
+    babelHelpers: 'bundled',
+    exclude: 'node_modules/**',
+    configFile: false,
+  }),
+  nodeResolve({
+    browser: true, // allow to use
+  }),
+  production && terser({
+    format: {
+      comments: false,
+    },
+    keep_fnames: false,
+    mangle: {
+      toplevel: true,
+    },
+  }),
+];
+
+async function jsTask() {
+  return src(['src/index.js'])
+    .pipe(rollup({
+      plugins: rollupPlugins,
+    }, {
+      format: 'es',
+    }))
+    .pipe(through2.obj(async (file, _, cb) => {
+      const base = file.dirname.split('/').pop();
+      file.basename = `${base}.js`;
+      cb(null, file);
+    }))
+    .pipe(dest('dist/debug'));
+}
+
+exports.default = series(jsTask);
+```
+
+## Prior Gulp 3 and below
 ``` js
 var gulp = require('gulp')
 var rename = require('gulp-rename')
@@ -178,6 +230,60 @@ gulp.task('build', function() {
     .pipe(sourcemaps.write(''))
     .pipe(gulp.dest('dist'))
 })
+```
+
+## Should you use this ?
+
+Rollup itself can be use as a gulp task and if you only want to bundle js file, that is enough.
+However if you need the output to be in gulp stream, yes `gulp-best-rollup` help you with that.
+There is no other advatange can be taken of from gulp like incremental build as it rollup will
+treat it differently.
+
+```js
+const { rollup } = require('rollup');
+const { babel } = require('@rollup/plugin-babel');
+const { terser } = require('rollup-plugin-terser');
+const { nodeResolve } = require('@rollup/plugin-node-resolve');
+const commonjs = require('@rollup/plugin-commonjs');
+const sizes = require('rollup-plugin-size');
+
+const rollupPlugins = [
+  commonjs(),
+  babel({
+    babelHelpers: 'bundled',
+    exclude: 'node_modules/**',
+    configFile: false,
+  }),
+  nodeResolve({
+    browser: true
+  }),
+  production && terser({
+    format: {
+      comments: false,
+    },
+    keep_fnames: false,
+    mangle: {
+      toplevel: true,
+    },
+
+  }),
+  sizes(),
+];
+
+async function rollupTask() {
+  const rollupBuild = await rollup({
+    input: 'src/index.js',
+    plugins: rollupPlugins,
+  });
+  await rollupBuild.write({
+    file: 'dist/bundle.js',
+    format: 'es',
+    sourcemap: true,
+  });
+  await rollupBuild.close();
+}
+
+exports.default = series(rollupTask);
 ```
 
 ## Contributing
