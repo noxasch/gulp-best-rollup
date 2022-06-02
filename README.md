@@ -5,7 +5,7 @@ forked from [jdz321/gulp-best-rollup](https://github.com/jdz321/gulp-best-rollup
 
 Rewritten in modern ES6 and support Rollup v2.X
 
-[![Node.js CI](https://github.com/noxasch/gulp-best-rollup-2/actions/workflows/integration.yaml/badge.svg)](https://github.com/noxasch/gulp-best-rollup-2/actions/workflows/integration.yaml) ![Node version](https://img.shields.io/node/v/gulp-best-rollup-2) ![Min Rollup](https://img.shields.io/npm/dependency-version/gulp-best-rollup-2/peer/rollup)
+[![Node.js CI](https://github.com/noxasch/gulp-best-rollup-2/actions/workflows/integration.yaml/badge.svg?event=push)](https://github.com/noxasch/gulp-best-rollup-2/actions/workflows/integration.yaml) ![Node version](https://img.shields.io/node/v/gulp-best-rollup-2) ![Min Rollup](https://img.shields.io/npm/dependency-version/gulp-best-rollup-2/peer/rollup)
 
 A [Gulp](https://www.npmjs.com/package/gulp) plugin for [Rollup](https://www.npmjs.com/package/rollup) ES6 Bundler. In comparison with [gulp-rollup](https://www.npmjs.com/package/gulp-rollup), this plugin integrates Rollup deeper into Gulps pipeline chain. It takes some of the Rollup API out of your hands, in exchange for giving you full power over the pipeline (to use any gulp plugins).
 
