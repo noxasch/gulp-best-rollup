@@ -298,4 +298,9 @@ Currently we are 82.47%	code coverage.
 npm run test
 ```
 
+1. Fork
+2. Build
+3. Write Test
+4. Create a PR
+
 
